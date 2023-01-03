@@ -9,37 +9,52 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg gradients block py-6">ERDIBE</a>
+            <a href="#home" class="gradients block py-6 text-lg font-bold">ERDIBE</a>
           </div>
           <div class="flex items-center px-4">
-            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
               <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
             </button>
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
                 </li>
                 <li class="group">
-                  <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
                 </li>
                 <li class="group">
-                  <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Clients</a>
+                  <a href="#clients" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
                 </li>
                 <li class="group">
-                  <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                  <a href="#blog" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -50,20 +65,22 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-24">
+    <section id="home" class="pt-24 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold gradients md:text-xl">Hello ✌, Im <span class="block font-bold text-dark text-4xl mt-1">Rudy Santoso</span></h1>
-            <h2 class="font-md text-secondary text-lg mb-5 lg:text-2xl">Junior Front-End Dev | <span class="text-dark">Tech Support</span></h2>
-            <p class="font-medium text-slate-400 mb-10 leading-relaxed">Experienced IT Support, Excited on web programming, especially front end developing. <span class="text-dark font-bold">Open for any opportunities.</span></p>
+            <h1 class="gradients text-base font-semibold md:text-xl">Hello ✌, Im <span class="mt-1 block text-4xl font-bold text-dark dark:text-white">Rudy Santoso</span></h1>
+            <h2 class="font-md mb-5 text-lg text-secondary lg:text-2xl">Junior Front-End Dev | <span class="text-dark dark:text-white">Tech Support</span></h2>
+            <p class="mb-10 font-medium leading-relaxed text-slate-400">
+              Experienced IT Support, Excited on web programming, especially front end developing. <span class="font-bold text-dark dark:text-white">Open for any opportunities.</span>
+            </p>
 
-            <a href="#contact" class="text-base font-semibold text-white bgradients py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-200 ease-in-out">Contact Me</a>
+            <a href="#contact" class="bgradients rounded-full py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-80 hover:shadow-lg">Contact Me</a>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2 lg:mt-9 right-0 lg:right-0">
+          <div class="right-0 w-full self-end px-4 lg:right-0 lg:mt-9 lg:w-1/2">
             <div class="relative mt-10">
-              <img src="dist/img/profile.png" alt="rudy" class="max-w-full mx-auto" />
-              <span class="absolute -bottom-20 -z-10 left-1/2 -translate-x-1/2">
+              <img src="dist/img/profile.png" alt="rudy" class="relative z-10 mx-auto max-w-full" />
+              <span class="absolute -bottom-20 left-1/2 -translate-x-1/2">
                 <svg width="400" height="400" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
@@ -91,7 +108,7 @@
                   </defs>
 
                   <g filter="url(#grain)" clip-path="url(#shape)">
-                    <path fill="url(#linearGradientId)" d="M773.5,639Q660,778,484,805Q308,832,187,666Q66,500,211,375Q356,250,508,236Q660,222,773.5,361Q887,500,773.5,639Z" transform="translate()" scale="1.2" />
+                    <path fill="url(#linearGradientId)" d="M773.5,639Q660,778,484,805Q308,832,187,666Q66,500,211,375Q356,250,508,236Q660,222,773.5,361Q887,500,773.5,639Z" transform="translate()" scale="(1.3)" />
                   </g>
                 </svg>
 
@@ -119,57 +136,57 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-0">
+    <section id="about" class="pt-36 pb-0 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase gradients text-lg mb-3">About Me</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-4xl">I am an experienced worker as Desktop Engineer and Docucare.</h2>
-            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="gradients mb-3 text-lg font-bold uppercase">About Me</h4>
+            <h2 class="mb-5 max-w-xl text-3xl font-bold text-dark dark:text-white lg:text-4xl">I am an experienced worker as Desktop Engineer and Docucare.</h2>
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
               With my experience I can become a very focused and detail oriented technician who is able to analyze, diagnose, and solved various problems accurately using standard equipment and comprehensive checklist. My objective career
               is to become an expert in the IT industry on any field.
             </p>
           </div>
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase gradients text-lg mb-3">SKILLS</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-4xl">Programming Skills</h2>
-            <ul class="font-medium text-base text-secondary max-w-xl lg:text-lg list-disc">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="gradients mb-3 text-lg font-bold uppercase">SKILLS</h4>
+            <h2 class="mb-5 max-w-xl text-3xl font-bold text-dark dark:text-white lg:text-4xl">Programming Skills</h2>
+            <ul class="max-w-xl list-disc text-base font-medium text-secondary lg:text-lg">
               <li>Programming Tools (Dev C++, SublimeText, VSC).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 90%"></div>
               </div>
 
               <li>Web Developing (HTML, CSS, JavaScript, PHP).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 60%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 60%"></div>
               </div>
 
               <li>Web Server (XAMPP, WAMPP, Apache).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 80%"></div>
               </div>
 
               <li>Framework (Bootstrap 5, Laravel, TailwindCSS).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 60%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 60%"></div>
               </div>
 
               <li>Data Analitics (Phyton, R, BigQuery, Data Studio, PowerBI).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 45%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 45%"></div>
               </div>
 
               <li>Game Developing (C++, Scratch, UNREAL Engine, Unity, Blender).</li>
-              <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-3">
-                <div class="bg-primary h-2.5 rounded-full" style="width: 40%"></div>
+              <div class="mb-3 h-2.5 w-1/2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <div class="h-2.5 rounded-full bg-primary" style="width: 40%"></div>
               </div>
             </ul>
           </div>
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 text-center lg:text-justify">Download My CV</h3>
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h3 class="mb-4 text-center text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-justify lg:text-3xl">Download My CV</h3>
             <a
               href="https://drive.google.com/uc?export=download&id=1vvac54eFkJ5rBeCPCOhjBFFxrpJvOFQf"
-              class="w-20 h-20 mx-auto lg:mx-0 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white mb-10"
+              class="mx-auto mb-10 flex h-20 w-20 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark lg:mx-0"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="50" class="fill-current" viewBox="0 0 96 96">
                 <g transform="scale(3)">
@@ -189,12 +206,16 @@
               </svg>
             </a>
           </div>
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">My Social Media</h3>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">You can connect with my social media below. Thankyou!</p>
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">My Social Media</h3>
+            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">You can connect with my social media below. Thankyou!</p>
             <div class="div flex items-center">
-              <!-- Youtube -->
-              <a href="https://discordapp.com/users/651419256860311553" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <!-- Discord -->
+              <a
+                href="https://discordapp.com/users/651419256860311553"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark"
+              >
                 <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Dicsord</title>
                   <path
@@ -203,7 +224,11 @@
                 </svg>
               </a>
               <!-- Instagram -->
-              <a href="https://www.instagram.com/rd.santoso/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                href="https://www.instagram.com/rd.santoso/"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark"
+              >
                 <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Instagram</title>
                   <path
@@ -212,7 +237,11 @@
                 </svg>
               </a>
               <!-- Facebook -->
-              <a href="https://www.facebook.com/kalongsword" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                href="https://www.facebook.com/kalongsword"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark"
+              >
                 <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Facebook</title>
                   <path
@@ -221,7 +250,11 @@
                 </svg>
               </a>
               <!-- Github -->
-              <a href="https://github.com/erdibe" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                href="https://github.com/erdibe"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark"
+              >
                 <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>GitHub</title>
                   <path
@@ -230,7 +263,11 @@
                 </svg>
               </a>
               <!-- Linkedin -->
-              <a href="https://www.linkedin.com/in/rudy-santoso-2320b0226/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                href="https://www.linkedin.com/in/rudy-santoso-2320b0226/"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white dark:hover:text-dark"
+              >
                 <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>LinkedIn</title>
                   <path
@@ -246,55 +283,57 @@
     <!-- About Section End -->
 
     <!-- Waves 1 -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#f1f5f9"
-        fill-opacity="1"
-        d="M0,256L21.8,266.7C43.6,277,87,299,131,288C174.5,277,218,235,262,208C305.5,181,349,171,393,186.7C436.4,203,480,245,524,250.7C567.3,256,611,224,655,208C698.2,192,742,192,785,192C829.1,192,873,192,916,181.3C960,171,1004,149,1047,170.7C1090.9,192,1135,256,1178,272C1221.8,288,1265,256,1309,245.3C1352.7,235,1396,245,1418,250.7L1440,256L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
-      ></path>
-    </svg>
+    <div class="bg-white dark:bg-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#6b7280"
+          fill-opacity="1"
+          d="M0,256L21.8,266.7C43.6,277,87,299,131,288C174.5,277,218,235,262,208C305.5,181,349,171,393,186.7C436.4,203,480,245,524,250.7C567.3,256,611,224,655,208C698.2,192,742,192,785,192C829.1,192,873,192,916,181.3C960,171,1004,149,1047,170.7C1090.9,192,1135,256,1178,272C1221.8,288,1265,256,1309,245.3C1352.7,235,1396,245,1418,250.7L1440,256L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pt-24 pb-0 bg-slate-100">
+    <section id="portfolio" class="bg-gray-500 pt-24 pb-0 dark:bg-gray-500">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg gradients mb-2">PORTFOLIO</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Completed Projects</h2>
-            <p class="font-medium text-medium text-secondary md:text-lg">Now you are looking at a website created using the TailwindCSS framework</p>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="gradients mb-2 text-lg font-semibold">PORTFOLIO</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Completed Projects</h2>
+            <p class="text-medium font-medium text-dark dark:text-white md:text-lg">Now you are looking at a website created using the TailwindCSS framework</p>
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="overflow-hidden rounded-md shadow-md">
               <a href="https://portfolioerdibe.000webhostapp.com/" target="_blank">
                 <img src="dist/img/portfolio/1.PNG" alt="Landing Page" width="w-full" />
               </a>
             </div>
-            <h3 class="block font-semibold text-xl text-dark mt-5 mb-3 hover:text-primary truncate">Landing Page : Rudy Santoso</h3>
-            <p class="font-medium text-base text-secondary mb-3">Landing page made with framework BOOTSTRAP 5 and JavaScript animation</p>
-            <a href="https://portfolioerdibe.000webhostapp.com/" target="_blank" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Demonstration</a>
+            <h3 class="mt-5 mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Landing Page : Rudy Santoso</h3>
+            <p class="mb-3 text-base font-medium text-dark dark:text-white">Landing page made with framework BOOTSTRAP 5 and JavaScript animation</p>
+            <a href="https://portfolioerdibe.000webhostapp.com/" target="_blank" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Demonstration</a>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="overflow-hidden rounded-md shadow-md">
               <a href="https://docs.google.com/document/d/1spbpIFHHvFXbCNc6kRUNjXl4plBHNyOl/edit?rtpof=true&sd=true" target="_blank">
                 <img src="dist/img/portfolio/2.jpg" alt="E-Commerce" width="w-full" />
               </a>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 hover:text-primary">E-Commerce : IT-Work</h3>
-            <p class="font-medium text-base text-secondary mb-3">Website where you can search, find and reserve shared working place.</p>
-            <a href="https://docs.google.com/document/d/1spbpIFHHvFXbCNc6kRUNjXl4plBHNyOl/edit?rtpof=true&sd=true" target="_blank" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Demonstration</a>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark hover:text-primary dark:text-white">E-Commerce : IT-Work</h3>
+            <p class="mb-3 text-base font-medium text-dark dark:text-white">Website where you can search, find and reserve shared working place.</p>
+            <a href="https://docs.google.com/document/d/1spbpIFHHvFXbCNc6kRUNjXl4plBHNyOl/edit?rtpof=true&sd=true" target="_blank" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Demonstration</a>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="overflow-hidden rounded-md shadow-md">
               <a href="https://scratch.mit.edu/projects/708054220" target="_blank">
                 <img src="dist/img/portfolio/3.PNG" alt="Gamification" width="w-full" />
               </a>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 hover:text-primary">Thesis : Gamification</h3>
-            <p class="font-medium text-base text-secondary mb-3">Create learning materials and then gamify them with the scratch programming platform.</p>
-            <a href="https://scratch.mit.edu/projects/708054220" target="_blank" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Demonstration</a>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark hover:text-primary dark:text-white">Thesis : Gamification</h3>
+            <p class="mb-3 text-base font-medium text-dark dark:text-white">Create learning materials and then gamify them with the scratch programming platform.</p>
+            <a href="https://scratch.mit.edu/projects/708054220" target="_blank" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Demonstration</a>
           </div>
         </div>
       </div>
@@ -302,36 +341,36 @@
     <!-- Portfolio Section End -->
 
     <!-- Waves 2 -->
-    <svg class="bg-slate-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <!-- <svg class="bg-slate-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#334155"
         fill-opacity="1"
         d="M0,192L21.8,170.7C43.6,149,87,107,131,96C174.5,85,218,107,262,133.3C305.5,160,349,192,393,208C436.4,224,480,224,524,234.7C567.3,245,611,267,655,250.7C698.2,235,742,181,785,170.7C829.1,160,873,192,916,192C960,192,1004,160,1047,160C1090.9,160,1135,192,1178,224C1221.8,256,1265,288,1309,250.7C1352.7,213,1396,107,1418,53.3L1440,0L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
       ></path>
-    </svg>
+    </svg> -->
 
     <!-- Clients Section Start -->
-    <section id="clients" class="pt-24 pb-0 bg-slate-700">
+    <section id="clients" class="bg-slate-700 pt-24 pb-0">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">CLIENTS</h4>
-            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Who have worked together</h2>
-            <p class="font-medium text-medium text-secondary md:text-lg">This Section is a dummy clients</p>
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">CLIENTS</h4>
+            <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Who have worked together</h2>
+            <p class="text-medium font-medium text-secondary md:text-lg">This Section is a dummy clients</p>
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap items-center justify-center">
-          <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+        <div class="flex w-full flex-wrap items-center justify-center px-4">
+          <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
             <img src="dist/img/clients/Google_2015_logo.svg" alt="Google" />
           </a>
-          <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+          <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
             <img src="dist/img/clients/Grab_Logo.svg" alt="Grab" />
           </a>
-          <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+          <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
             <img src="dist/img/clients/Shopee_logo.svg" alt="Shopee" />
           </a>
-          <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+          <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
             <img src="dist/img/clients/Tokopedia.svg" alt="Tokopedia" />
           </a>
         </div>
@@ -340,64 +379,64 @@
     <!-- Clients Section End -->
 
     <!-- Waves 3 -->
-    <svg class="bg-slate-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <!-- <svg class="bg-slate-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#f1f5f9"
         fill-opacity="1"
         d="M0,128L21.8,122.7C43.6,117,87,107,131,117.3C174.5,128,218,160,262,186.7C305.5,213,349,235,393,218.7C436.4,203,480,149,524,122.7C567.3,96,611,96,655,122.7C698.2,149,742,203,785,224C829.1,245,873,235,916,240C960,245,1004,267,1047,250.7C1090.9,235,1135,181,1178,144C1221.8,107,1265,85,1309,90.7C1352.7,96,1396,128,1418,144L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
       ></path>
-    </svg>
+    </svg> -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="pt-24 pb-32 bg-slate-100">
+    <section id="blog" class="bg-slate-100 pt-24 pb-32 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg gradients mb-2">BLOG</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">New Blog</h2>
-            <p class="font-medium text-medium text-secondary md:text-lg">This section is a dummy blog</p>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="gradients mb-2 text-lg font-semibold">BLOG</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">New Blog</h2>
+            <p class="text-medium font-medium text-secondary md:text-lg">This section is a dummy blog</p>
           </div>
         </div>
         <div class="flex flex-wrap">
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <a href="#">
                 <img src="https://source.unsplash.com/360x200?programmer" alt="programming" class="w-full" />
               </a>
               <div class="py-8 px-6">
                 <h3>
-                  <a href="#" class="block mb-3 font-semibold text-dark hover:text-primary truncate">Tips Belajar Programming</a>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white">Tips Belajar Programming</a>
                 </h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
-                <a href="#" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya</a>
+                <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
+                <a href="#" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca selengkapnya</a>
               </div>
             </div>
           </div>
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <a href="#">
                 <img src="https://source.unsplash.com/360x200?game" alt="programming" class="w-full" />
               </a>
               <div class="py-8 px-6">
                 <h3>
-                  <a href="#" class="block mb-3 font-semibold text-dark hover:text-primary truncate">Gaming</a>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white">Gaming</a>
                 </h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
-                <a href="#" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya</a>
+                <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
+                <a href="#" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca selengkapnya</a>
               </div>
             </div>
           </div>
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <a href="#">
                 <img src="https://source.unsplash.com/360x200?sports" alt="programming" class="w-full" />
               </a>
               <div class="py-8 px-6">
                 <h3>
-                  <a href="#" class="block mb-3 font-semibold text-dark hover:text-primary truncate">Sports</a>
+                  <a href="#" class="mb-3 block truncate font-semibold text-dark hover:text-primary dark:text-white">Sports</a>
                 </h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
-                <a href="#" class="font-medium text-sm text-white bgradients py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya</a>
+                <p class="mb-6 text-base font-medium text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, modi!</p>
+                <a href="#" class="bgradients rounded-lg py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca selengkapnya</a>
               </div>
             </div>
           </div>
@@ -407,33 +446,33 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-700">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">CONTACT</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Contact Me</h2>
-            <p class="font-medium text-medium text-secondary md:text-lg">Your message will be recorded and replied via email : rd.business01@gmail.com</p>
-            <p class="font-medium text-medium text-dark md:text-lg">Thanks for your time and opportunity 😉</p>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">CONTACT</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Contact Me</h2>
+            <p class="text-medium font-medium text-secondary md:text-lg">Your message will be recorded and replied via email : rd.business01@gmail.com</p>
+            <p class="text-medium font-medium text-dark dark:text-white md:text-lg">Thanks for your time and opportunity 😉</p>
           </div>
         </div>
 
         <form action="">
-          <div class="w-full lg:w-2/3 lg:mx-auto">
-            <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base text-primary font-bold">Name</label>
-              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary" />
+          <div class="w-full lg:mx-auto lg:w-2/3">
+            <div class="mb-8 w-full px-4">
+              <label for="name" class="text-base font-bold text-primary">Name</label>
+              <input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
-            <div class="w-full px-4 mb-8">
-              <label for="email" class="text-base text-primary font-bold">Email</label>
-              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary" />
+            <div class="mb-8 w-full px-4">
+              <label for="email" class="text-base font-bold text-primary">Email</label>
+              <input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
-            <div class="w-full px-4 mb-8">
-              <label for="message" class="text-base text-primary font-bold">Message</label>
-              <textarea type="text" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary h-44"></textarea>
+            <div class="mb-8 w-full px-4">
+              <label for="message" class="text-base font-bold text-primary">Message</label>
+              <textarea type="text" id="message" class="h-44 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
             </div>
             <div class="w-full px-4">
-              <button class="w-full lg:w-1/4 text-base font-semibold text-white bgradients py-3 px-8 rounded-full hover:opacity-80 hover:shadow-lg transition duration-300">Send</button>
+              <button class="bgradients w-full rounded-full py-3 px-8 text-base font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg lg:w-1/4">Send</button>
             </div>
           </div>
         </form>
@@ -442,59 +481,59 @@
     <!-- Contact Section End -->
 
     <!-- Footer Section Start -->
-    <footer class="bg-dark pt-24 px-12">
+    <footer class="bg-dark px-12 pt-24">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 text-slate-300 font-md md:w-1/3">
-            <h2 class="font-bold text-4xl gradients mb-5">ERDIBE</h2>
-            <h3 class="font-bold text-2xl mb-2">Contact Me</h3>
+          <div class="font-md mb-12 w-full px-4 text-slate-300 md:w-1/3">
+            <h2 class="gradients mb-5 text-4xl font-bold">ERDIBE</h2>
+            <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
             <p>rd.business01@gmail.com</p>
             <p>Jl.Raden Saleh No.4</p>
             <p>Tangerang</p>
           </div>
-          <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="text-white text-xl mb-5">Blog Categories</h3>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl text-white">Blog Categories</h3>
             <ul class="text-slate-300">
               <li>
-                <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Programming</a>
+                <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Programming</a>
               </li>
               <li>
-                <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Gaming</a>
+                <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Gaming</a>
               </li>
               <li>
-                <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Sports</a>
+                <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Sports</a>
               </li>
             </ul>
           </div>
-          <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="text-white text-xl mb-5">Link</h3>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl text-white">Link</h3>
             <ul class="text-slate-300">
               <li>
-                <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
+                <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Home</a>
               </li>
               <li>
-                <a href="#about" class="inline-block text-base hover:text-primary mb-3">About Me</a>
+                <a href="#about" class="mb-3 inline-block text-base hover:text-primary">About Me</a>
               </li>
               <li>
-                <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
+                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
               </li>
               <li>
-                <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Blog</a>
+                <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Blog</a>
               </li>
               <li>
-                <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Contact</a>
+                <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="w-full pt-10 border-t border-slate-700">
-          <div class="div flex items-center justify-center mb-3">
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="div mb-3 flex items-center justify-center">
             <!-- Youtube -->
             <a
               href="https://discordapp.com/users/651419256860311553"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
               <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Dicsord</title>
@@ -504,7 +543,7 @@
               </svg>
             </a>
             <!-- Instagram -->
-            <a href="https://www.instagram.com/rd.santoso/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://www.instagram.com/rd.santoso/" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -513,7 +552,7 @@
               </svg>
             </a>
             <!-- Facebook -->
-            <a href="https://www.facebook.com/kalongsword" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://www.facebook.com/kalongsword" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Facebook</title>
                 <path
@@ -522,7 +561,7 @@
               </svg>
             </a>
             <!-- Github -->
-            <a href="https://github.com/erdibe" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://github.com/erdibe" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>GitHub</title>
                 <path
@@ -534,7 +573,7 @@
             <a
               href="https://www.linkedin.com/in/rudy-santoso-2320b0226/"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
               <svg width="20" role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>LinkedIn</title>
@@ -544,7 +583,7 @@
               </svg>
             </a>
           </div>
-          <p class="font-medium text-[0.75rem] text-slate-500 text-center">
+          <p class="text-center text-[0.75rem] font-medium text-slate-500">
             © Created with dedication by <a href="https://instagram.com/rd.santoso" target="_blank" class="font-bold text-primary">Rudy Santoso</a>, using
             <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>
           </p>
@@ -552,6 +591,12 @@
       </div>
     </footer>
     <!-- Footer Section End -->
+
+    <!-- Back to top Start -->
+    <a href="#home" class="bgradients fixed bottom-4 right-4 z-[9999] hidden h-8 w-8 items-center justify-center rounded-full p-2 hover:animate-pulse lg:h-14 lg:w-14" id="to-top">
+      <span class="mt-1 block h-2 w-2 rotate-45 border-t-2 border-l-2 lg:mt-2 lg:h-5 lg:w-5"></span>
+    </a>
+    <!-- Back to top End -->
     <script src="dist/js/script.js"></script>
   </body>
 </html>
