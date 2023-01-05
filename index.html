@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Tailwind CSS</title>
-    <link href="dist/css/final.css" rel="stylesheet" />
+    <link href="dist/output.css" rel="stylesheet" />
+
+    <!-- Fitur agar saat refresh di dark mode tidak kembali ke light mode dengan cara disimpan di localstorage -->
     <script>
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.documentElement.classList.add("dark");
@@ -118,22 +120,6 @@
                     <path fill="url(#linearGradientId)" d="M773.5,639Q660,778,484,805Q308,832,187,666Q66,500,211,375Q356,250,508,236Q660,222,773.5,361Q887,500,773.5,639Z" transform="translate()" scale="(1.3)" />
                   </g>
                 </svg>
-
-                <!-- <svg width="400" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#f59e0b"
-                    d="M61.1,-59C77,-45.1,86.3,-22.6,86.6,0.3C86.8,23.1,78,46.2,62.1,55.2C46.2,64.1,23.1,59,0.1,58.9C-22.8,58.8,-45.7,63.6,-58.8,54.6C-71.9,45.7,-75.2,22.8,-75.4,-0.2C-75.6,-23.2,-72.6,-46.4,-59.5,-60.3C-46.4,-74.2,-23.2,-78.8,-0.3,-78.5C22.6,-78.2,45.1,-72.9,61.1,-59Z"
-                    transform="translate(100 100)"
-                  />
-                </svg> -->
-
-                <!-- <svg width="400" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#f59e0b"
-                    d="M40.3,-42.3C47.8,-32.8,46.4,-16.4,45.3,-1C44.3,14.3,43.6,28.7,36.2,42.3C28.7,55.9,14.3,68.7,-0.7,69.4C-15.8,70.2,-31.6,58.8,-38.1,45.2C-44.5,31.6,-41.6,15.8,-45.4,-3.9C-49.3,-23.5,-60,-47.1,-53.5,-56.7C-47.1,-66.2,-23.5,-61.8,-3.6,-58.2C16.4,-54.6,32.8,-51.9,40.3,-42.3Z"
-                    transform="translate(100 100)"
-                  />
-                </svg> -->
               </span>
             </div>
           </div>
@@ -464,23 +450,31 @@
           </div>
         </div>
 
-        <form action="">
-          <div class="w-full lg:mx-auto lg:w-2/3">
-            <div class="mb-8 w-full px-4">
-              <label for="name" class="text-base font-bold text-primary">Name</label>
-              <input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+        <form target="_blank" action="https://formsubmit.co/3e7ceaffa13d1e4dd3e85f7532e20627" method="POST">
+          <div class="form-group w-full lg:mx-auto lg:w-2/3">
+            <div class="form-row">
+              <div class="col col mb-8 w-full px-4">
+                <label for="name" class="text-base font-bold text-primary">Name</label>
+                <input type="text" name="name" class="form-control w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Full Name" />
+              </div>
+              <div class="col mb-8 w-full px-4">
+                <label for="email" class="block text-base font-bold text-primary">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control peer w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:border-pink-700 invalid:focus:text-pink-700 invalid:focus:ring-pink-700"
+                  placeholder="Email Address"
+                />
+                <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">Format Email Tidak Valid !</p>
+              </div>
             </div>
-            <div class="mb-8 w-full px-4">
-              <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-            </div>
-            <div class="mb-8 w-full px-4">
-              <label for="message" class="text-base font-bold text-primary">Message</label>
-              <textarea type="text" id="message" class="h-44 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
-            </div>
-            <div class="w-full px-4">
-              <button class="bgradients w-full rounded-full py-3 px-8 text-base font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg lg:w-1/4">Send</button>
-            </div>
+          </div>
+          <div class="form-group mb-8 w-full px-4 lg:mx-auto lg:w-2/3">
+            <label for="message" class="text-base font-bold text-primary">Message</label>
+            <textarea placeholder="Your Message" class="form-control h-44 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" name="message" rows="10"></textarea>
+          </div>
+          <div class="col mx-auto w-full px-4 lg:w-1/4">
+            <button type="submit" class="bgradients w-full rounded-full py-3 px-8 text-base font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg">Submit Form</button>
           </div>
         </form>
       </div>
