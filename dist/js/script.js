@@ -52,3 +52,38 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
 } else {
   darkToggle.checked = false;
 }
+
+//clear form after submit
+// function eraseText() {
+//   document.getElementById("nd").value = "";
+//   document.getElementById("email").value = "";
+//   document.getElementById("output").value = "";
+// }
+
+// menambahkan event handler pada tombol submit
+// document.getElementById("submitButtonId").addEventListener("click", function(event) {
+//   event.preventDefault(); // mencegah form dari submit secara default
+
+//   // mengambil value dari input field
+//   var inputValue = document.getElementById("inputFieldId").value;
+
+//   // mengirim data ke server
+//   document.getElementById("formId").submit();
+
+// });
+
+// menambahkan event handler pada tombol submit
+document.getElementById("subform").addEventListener("click", function (event) {
+  event.preventDefault(); // mencegah form dari submit secara default
+
+  // mengambil value dari input field
+  var inputValue = document.getElementById("nd").value;
+  var inputValue = document.getElementById("email").value;
+  var inputValue = document.getElementById("output").value;
+
+  // melakukan proses yang diinginkan (misalnya mengirim data ke server atau menampilkan data di halaman)
+  document.getElementById("contacts").submit();
+
+  // mereset form
+  document.getElementById("contacts").reset();
+});
